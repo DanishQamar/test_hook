@@ -27,8 +27,8 @@ cat << 'EOF' > "$POST_MERGE_FILE"
 TIMESTAMP=$(date +"%Y%m%d-%H%M%S")
 
 # Define Tag Names
-TAG_PRE="backup-pre-pull-$TIMESTAMP"
-TAG_POST="backup-post-pull-$TIMESTAMP"
+TAG_PRE="backup-pull-$TIMESTAMP-0-pre-tag"
+TAG_POST="backup-pull-$TIMESTAMP-1-post-tag"
 
 # 2. Check if ORIG_HEAD exists (Standard check for a merge/pull)
 if git rev-parse --verify ORIG_HEAD >/dev/null 2>&1; then
